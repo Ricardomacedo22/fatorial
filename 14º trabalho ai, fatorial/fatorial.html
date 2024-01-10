@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fatorial</h1>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<input type="number" id="input">
+<button id="btn" onclick="fatorial()">Calcular Fatorial</button>
+
+<script>
+    /*primeiros 10 numeros**/
+for (var a = 0; a < 10; a++) {
+    let text = "";
+let a = 0;
+while (a < 10) {
+  text += "<br>número " + a;
+  a++;
+}
+document.getElementById("demo").innerHTML = text;
+}
+
+
+/*primeiros 10 numeros pares*/
+let text = "";
+let b = 0;
+while (b < 10 * 2) {
+  text += "<br>número " + b;
+  b+=2;
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+/*primeiros 10 numeros impares*/
+let text3 = "";
+let c = 1;
+while (c < 20 ) {
+  text3 += "<br>número " + c;
+  c+=2;
+}
+document.getElementById("demo3").innerHTML = text3;
+
+/*primeiros 10 múltiplos de 3*/
+for (let i = 0; i <= 9; i++) {
+    let text4 = ""
+    let mult = 3 * i;
+    while (i <= 9) {
+      text4 += "<br> número " + (3 * i);
+      i++;
+      console.log(i);
+
+    }
+    document.getElementById("demo4").innerHTML = text4;
+}
+
+
+/*divisores de 12*/
+for (let i = 1; i <= 12; i++) {
+    let text5 = ""
+    while (i <= 12) {
+  if (12 % i == 0 ) {
+      text5 += "<br> número " + i;
+      i++
+    }else if(12 % i !== 0){
+      i++
+    }
+    document.getElementById("demo5").innerHTML = text5;
+  }
+}
+
+/*fatorial de um número*/   /*o máximo suportado pelo meu pc é 170!, após este número diz "infinity" */
+function fatorial() {
+var fatorial = document.getElementById("input").value;
+var resultado = fatorial;
+  
+for (var i = 1; i < fatorial; i++) {
+    resultado *= i;
+    text6 = "<br> número = " + resultado;
+
+    document.getElementById("demo6").innerHTML = text6
+}
+}
+</script>
+
+</body>
+</html>
